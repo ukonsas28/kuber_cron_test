@@ -2,8 +2,8 @@ default:
   image: node:lts
 
 stages:
-  install
-  nodemailer
+  - install
+  - nodemailer
 
 InstallPackage
   stage: install
