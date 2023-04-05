@@ -10,7 +10,7 @@ stages:
 console_log:
   stage: logger
   script:
-    - npm install
+    - node ./logger.js
 
 send_email:
   stage: nodemailer
