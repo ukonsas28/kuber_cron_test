@@ -5,12 +5,12 @@ stages:
   - install
   - nodemailer
 
-InstallPackage
+Install-package:
   stage: install
   script:
     - npm install
 
-SendEmail
+SendEmail:
   stage: nodemailer
   script:
     - node ./index.js
