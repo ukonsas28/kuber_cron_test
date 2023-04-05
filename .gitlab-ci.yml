@@ -1,16 +1,18 @@
 default:
   image: node:lts
+  before_script: 
+    - npm install
 
 stages:
-  - install
+  - logger
   - nodemailer
 
-Install-package:
-  stage: install
+console_log:
+  stage: logger
   script:
     - npm install
 
-SendEmail:
+send_email:
   stage: nodemailer
   script:
     - node ./index.js
