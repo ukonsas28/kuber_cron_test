@@ -1,0 +1,16 @@
+default:
+  image: node:lts
+
+stages:
+  install
+  nodemailer
+
+InstallPackage
+  stage: install
+  script:
+    - npm install
+
+SendEmail
+  stage: nodemailer
+  script:
+    - node ./index.js

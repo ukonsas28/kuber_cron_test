@@ -1,0 +1,22 @@
+{
+  "name": "ci_cd_test",
+  "version": "1.0.0",
+  "description": "test repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/ukonsas28/ci_cd_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/ukonsas28/ci_cd_test/issues"
+  },
+  "homepage": "https://gitlab.com/ukonsas28/ci_cd_test#readme",
+  "dependencies": {
+    "nodemailer": "^6.9.1"
+  }
+}
