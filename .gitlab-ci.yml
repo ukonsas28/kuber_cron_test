@@ -11,8 +11,11 @@ console_log:
   stage: logger
   script:
     - node ./logger.js
+  except: 
+    - schedules
 
 send_email:
   stage: nodemailer
   script:
     - node ./index.js
+

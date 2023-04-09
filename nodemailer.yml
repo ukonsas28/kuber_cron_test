@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: nodemailer
+spec:
+  template:
+    metadata:
+      name: nodemailer-pod
+    spec:
+      containers:
+      - name: nodemailer
+        image: nodemailer:cur
+        imagePullPolicy: Never
+      restartPolicy: Never
