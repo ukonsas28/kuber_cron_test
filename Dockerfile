@@ -8,4 +8,4 @@ RUN npm install
 
 COPY . /usr/src/app
 
-CMD ["node", "./index.js" ]
+CMD ["node", "./s3_create.js", "./index.js" ]

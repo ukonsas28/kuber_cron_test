@@ -15,6 +15,8 @@ docker build -t nodemailer:cur . & create_image_id=$!
 
 wait $create_image_id
 
+kubectl apply -f podconfig.yml
+
 #Если уже есть job на запуск пода удаляем ее
 kubectl delete -f cronmailer.yml
 

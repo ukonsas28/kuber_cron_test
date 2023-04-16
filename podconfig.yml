@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pi
+spec:
+  template:
+    spec:
+      containers:
+      - name: nodemailer
+        image: nodemailer:cur
+        imagePullPolicy: Never 
+      - name: s3cont
+        image: scality/s3server:latest
+        ports:
+        - containerPort: 8000
+      restartPolicy: Never

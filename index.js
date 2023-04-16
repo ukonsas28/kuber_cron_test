@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+const sendToBucket = require("./s3_sender");
 
 const transporter = nodemailer.createTransport({
   host: "smtp.mail.ru",
@@ -24,3 +25,4 @@ transporter.sendMail(mailOptions, function (error, info) {
     console.log("Email sent: " + info.response);
   }
 });
+sendToBucket(JSON.stringify({ name: "Alex", date: new Date() }));
