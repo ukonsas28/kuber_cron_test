@@ -3,8 +3,10 @@ kind: CronJob
 metadata:
   name: cronmailer
 spec:
-  schedule: "*/3 * * * *"
-  concurrencyPolicy: Allow
+  schedule: "*/1 * * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
   jobTemplate:
     spec:
       backoffLimit: 2
